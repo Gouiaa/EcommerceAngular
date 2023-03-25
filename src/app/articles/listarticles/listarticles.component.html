@@ -1,0 +1,39 @@
+
+    <h3>Liste des Articles</h3>
+    <div class="container">
+    <div class="col-md-2">
+    <input type="button"value="Ajouter" class="btn btn-success" routerLink="/articles/ajoutarticle"></div>
+    <table  datatable class="table table-hover table-striped table-bordere ">
+    <thead>
+    <tr>
+    <th>reference</th>
+    <th>designation</th>
+    <th>imageart</th>
+    <th> marque</th>
+    
+   
+    <th>categorieID</th>
+    <th>scategorieID</th>
+    <th>Actions</th>
+</tr>
+</thead>
+<tbody>
+<tr class="table-life" *ngFor="let a of article">
+<td>{{a.reference}}</td>
+<td>{{a.designation}}</td>
+<td><img src="http://res.cloudinary.com/iset-sfax/image/upload/v1658751504/images/chips.jpg.jpg" width="120" height="60"></td>
+<td>{{a.imageart}}</td>
+
+<td>{{a.marque}}</td>
+<td>{{a.scategorieID}}</td>
+    
+<td>
+<input type="button"value="Modifier"class="btn btn-info btn-sm"[routerLink]="['/articles/editarticle/',a._id]">
+<input type="button" value="Supprimer" class="btn btn-danger btn-sm">
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+

@@ -1,0 +1,16 @@
+<h3>Liste des categories</h3>
+<div class="container">
+<table class="table striped">
+<thead>
+<tr>
+<th>Nom catégorie</th>
+<th>Image Categorie</th>
+</tr>
+</thead>
+<tbody>
+<tr class="table-life" *ngFor="let c of listcategories">
+<td>{{c.nomcategorie}}</td>
+<td><img src= "http://res.cloudinary.com/iset-sfax/image/upload/v1658749242/images/lenouv.jpg.jpg" width="300" height="100"/></td>
+</tr>
+</tbody>
+</table>
